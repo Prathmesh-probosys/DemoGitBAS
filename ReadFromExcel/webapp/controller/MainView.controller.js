@@ -38,6 +38,11 @@ sap.ui.define([
 				};
 				reader.readAsBinaryString(file);
 			}
-		}
+		},
+		//Apply new changes
+		onApplyFunction: function () {
+			alert("Apply New chages");
+		},
+		
 	});
 });
