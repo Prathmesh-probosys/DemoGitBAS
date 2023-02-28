@@ -38,7 +38,7 @@ sap.ui.define([
 				};
 				reader.readAsBinaryString(file);
 			}
-			// Apply comments.
+			
 			
 		}
 	
