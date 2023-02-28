@@ -43,6 +43,9 @@ sap.ui.define([
 		onApplyFunction: function () {
 			alert("Apply New chages");
 		},
-		
+		//Apply changes from BAS
+		onBASChange: function () {
+			alert("Apply New chages from BAS");
+		},
 	});
 });
