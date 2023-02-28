@@ -1,0 +1,124 @@
+{
+  "_version": "1.17.0",
+  "sap.app": {
+    "id": "com.itgbrands.stock.transfer.WH_TO_PRDSTG.Z_WH_TO_PRDSTG",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.9.0",
+      "toolsId": "48724604-bacf-46aa-96e4-8d8c5995605b"
+    },
+    "dataSources": {
+      "Z_STOCK_TRANSFER_SRV": {
+        "uri": "/sap/opu/odata/sap/Z_STOCK_TRANSFER_SRV/",
+        "type": "OData",
+        "settings": {
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.71.9",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.itgbrands.stock.transfer.WH_TO_PRDSTG.Z_WH_TO_PRDSTG.i18n.i18n"
+        }
+      },
+      "StockTransferOmodel": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "settings": {
+          "defaultOperationMode": "Server",
+          "defaultBindingMode": "OneWay",
+          "defaultCountMode": "Request"
+        },
+        "dataSource": "Z_STOCK_TRANSFER_SRV",
+        "preload": true
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.itgbrands.stock.transfer.WH_TO_PRDSTG.Z_WH_TO_PRDSTG.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteMaster",
+          "pattern": ":?query:",
+          "target": [
+            "TargetMaster"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetMaster": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Master",
+          "viewName": "Master"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.itgbrands.stock.transfer.WH_TO_PRDSTG.Z_WH_TO_PRDSTG.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

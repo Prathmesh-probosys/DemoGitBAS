@@ -1,0 +1,67 @@
+<mvc:View controllerName="com.itgbrands.receive.material.BIN_TO_BIN.Z_BIN_TO_BIN.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <customHeader>
+            <Bar class="headerColor">
+                <contentLeft>
+                    <Button id="sideNavigationHomeButton" icon="sap-icon://home" type="Transparent" tooltip="Back to Home">
+                        <layoutData>
+                            <OverflowToolbarLayoutData priority="NeverOverflow" />
+                        </layoutData>
+                    </Button>
+                </contentLeft>
+                <contentMiddle>
+                    <Title class="testClass" text="{i18n>appTitle}" />
+                </contentMiddle>
+            </Bar>
+        </customHeader>
+        <content>
+            <MessageStrip id="MessageStripID" close="fnCloseMsg" showIcon="true" visible="false" showCloseButton="true" class="sapUiMediumMarginBottom sapUiMediumSmallTop" />
+            <f:SimpleForm
+                id="SimpleFormToolbar"
+                layout="ResponsiveGridLayout"
+                editable="true"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false">
+                <f:content>
+                    <Label id="TopBarcode_Label" />
+                    <Input id="TopBarcode_Input" class="textSize" liveChange="fnTopBarcode" placeholder="{i18n>TOP_BARCODE}" submit="fnscandTopBarcode" />
+                    <Label id="PalletNum_Label" visible="true" />
+                    <Input id="PalletNum_Input" visible="true" enabled="false" placeholder="{i18n>PalletNumber}" />
+                    <Label id="BotBarcode_Label" />
+                    <Input id="BotBarcode_Input" liveChange="fnBottomBarcode" enabled="false" placeholder="{i18n>BOT_BARCODE}" submit="fnscandBotBarcode" />
+                    <Label id="Quentity_Label" visible="true" />
+                    <Input id="Quentity_Input" visible="true" enabled="false" placeholder="{i18n>Quentity}" />
+                    <Label id="BinBarcode_Label" />
+                    <Input id="BinBarcode_Input" liveChange="fnBinBarcode" visible="true" enabled="false" placeholder="{i18n>BIN_BARCODE}" submit="onPost" />
+                    <Label text="" />
+                    <FlexBox alignItems="End" justifyContent="End">
+                        <items>
+                            <Label text="" />
+                            <Button id="clear" icon="sap-icon://decline" type="Reject" text="{i18n>Clear}" class="sapUiSmallMarginEnd" press="onClear" />
+                            <Button id="create" text="{i18n>POST}" type="Accept" icon="sap-icon://process" press="onPost" visible="true" enabled="false" />
+                        </items>
+                    </FlexBox>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+        <footer>
+            <Bar>
+                <contentRight />
+                <contentLeft>
+                    <Button text="" />
+                </contentLeft>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>

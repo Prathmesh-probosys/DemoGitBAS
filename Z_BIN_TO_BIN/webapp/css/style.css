@@ -1,0 +1,78 @@
+/* Enter your custom styles here */
+/* Enter your custom styles here */
+
+/* Enter your custom styles here */
+
+.sapMLIB {
+    border: none !important;
+    background-color: #fafafa !important;
+}
+
+.noBoeder {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.headerColor {
+    background-color: #2f3c48 !important;
+}
+
+.footer {
+    color: #cae4fb !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.testClass {
+    color: #cae4fb !important;
+}
+
+.sapMBtnDefault .sapMBtnContent {
+    color: #cae4fb !important;
+}
+
+/* First form i.e HU1, HU2, dest*/
+.textSize {
+    font-size: 17px !important;
+}
+
+/* 2nd form i.e deatils of HU's */
+.formtextSize {
+    font-size: 21px !important;
+}
+
+/* input value */
+.sapMInputBaseInner {
+    font-size: 1.1rem !important;
+}
+
+/* msg strip*/
+.sapMText {
+    font-size: 21px !important;
+}
+
+/* All Buttons header button also*/
+.sapMBtnInner {
+    font-size: 1.2rem !important;
+}
+
+/* success log header*/
+.sapMTitleStyleAuto {
+    font-size: 1.3rem;
+}
+
+/* message Toast*/
+.sapMMessageToast {
+    font-size: 1.2rem !important;
+}
+
+/* Result Form Title*/
+.sapUiFormTitleH5 {
+    font-size: 1.2rem !important;
+}
+
+.ABC {
+    font-size: 2rem !important;
+}

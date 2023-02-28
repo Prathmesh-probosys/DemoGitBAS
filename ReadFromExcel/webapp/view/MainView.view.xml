@@ -1,0 +1,50 @@
+<mvc:View controllerName="com.test.ReadFromExcel.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:u="sap.ui.unified">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Read From Excel">
+					<customHeader>
+						<Bar>
+							<contentMiddle>
+								<Label text="Read Data From Excel"/>
+							</contentMiddle>
+							<contentRight>
+								<u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" fileType="XLSX,xlsx"
+									icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload"/>
+							</contentRight>
+						</Bar>
+					</customHeader>
+					<content>
+						<Table items="{localModel>/items}">
+							<columns>
+								<Column>
+									<Label text="Name"/>
+								</Column>
+								<Column>
+									<Label text="Age"/>
+								</Column>
+								<Column>
+									<Label text="Job"/>
+								</Column>
+								<Column>
+									<Label text="Address"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{localModel>Name}"/>
+										<Text text="{localModel>Age}"/>
+										<Text text="{localModel>Job}"/>
+										<Text text="{localModel>Address}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
