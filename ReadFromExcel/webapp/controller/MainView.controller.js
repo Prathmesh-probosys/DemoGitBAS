@@ -38,8 +38,6 @@ sap.ui.define([
 				};
 				reader.readAsBinaryString(file);
 			}
-			// Add value change
-			
 		}
 	
 
