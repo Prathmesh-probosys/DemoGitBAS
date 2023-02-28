@@ -39,7 +39,5 @@ sap.ui.define([
 				reader.readAsBinaryString(file);
 			}
 		}
-	
-// using command
 	});
 });
