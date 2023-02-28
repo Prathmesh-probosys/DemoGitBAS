@@ -38,6 +38,10 @@ sap.ui.define([
 				};
 				reader.readAsBinaryString(file);
 			}
-		}
+		},
+		onFuntionChnage: function () {
+			alert("Change code From BAS");
+		},
+
 	});
 });
